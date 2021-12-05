@@ -7,14 +7,14 @@
 <br>
 
 
-<div class="container">
+<div class="container text-break">
     <h2 class="text-center">Triangle Cipher Encryption</h2>
 
     <form method="post" action="{{route('triangle.encrypt')}}">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="plaintext"><h5>Plaintext</h5></label>
-            <input type="text" class="form-control" id="plaintext" required name="plaintext" rows="3" @isset ($plaintext) value="{{$plaintext}}" @endisset></input>
+            <input type="text" class="form-control" id="plaintext" minlength="2" required name="plaintext" rows="3" @isset ($plaintext) value="{{$plaintext}}" @endisset></input>
         </div>
 
         <button class="btn btn-primary" type="submit">Submit</button>
